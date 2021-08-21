@@ -11,10 +11,14 @@ const provideServices = new ProvideServices(
 
 // Import Characters Services
 import { character } from "../../modules/character/infrastructure/services";
+import { episode } from "../../modules/episode/infrastructure/services";
 
 // Set Services
 export const Services = {
-  characters: {
+  character: {
     get: new character.GetCharactersService(provideServices),
+  },
+  episode: {
+    get: new episode.GetEpisodesService(provideServices),
   },
 };
