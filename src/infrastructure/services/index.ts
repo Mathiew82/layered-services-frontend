@@ -10,6 +10,16 @@ const serviceProvide = new ServiceProvide({
 import { characterService } from "../../app/modules/character/infrastructure/services";
 import { episodeService } from "../../app/modules/episode/infrastructure/services";
 
+// Import Type Modules
+// import {
+//   DemoCharacterType1,
+//   DemoCharacterType2,
+// } from "../../app/modules/character/domain/types";
+// import {
+//   DemoEpisodeType1,
+//   DemoEpisodeType2,
+// } from "../../app/modules/episode/domain/types";
+
 // Set and export services by modules
 export const character = {
   getAll: () =>
