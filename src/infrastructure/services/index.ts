@@ -12,9 +12,10 @@ import { episodeService } from "../../app/modules/episode/infrastructure/service
 
 // Set and export services by modules
 export const character = {
-  getAll: new characterService.GetCharactersService(serviceProvide),
+  getAll: () =>
+    new characterService.GetCharactersService(serviceProvide).execute(),
 };
 
 export const episode = {
-  getAll: new episodeService.GetEpisodesService(serviceProvide),
+  getAll: () => new episodeService.GetEpisodesService(serviceProvide).execute(),
 };
