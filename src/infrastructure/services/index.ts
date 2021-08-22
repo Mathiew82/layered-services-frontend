@@ -14,8 +14,14 @@ import { episodeService } from "../../app/modules/episode/infrastructure/service
 export const character = {
   getAll: () =>
     new characterService.GetCharactersService(serviceProvide).execute(),
+  getById: (characterId: number) =>
+    new characterService.GetCharacterByIdService(serviceProvide).execute(
+      characterId
+    ),
 };
 
 export const episode = {
   getAll: () => new episodeService.GetEpisodesService(serviceProvide).execute(),
+  getById: (episodeId: number) =>
+    new episodeService.GetEpisodeByIdService(serviceProvide).execute(episodeId),
 };
