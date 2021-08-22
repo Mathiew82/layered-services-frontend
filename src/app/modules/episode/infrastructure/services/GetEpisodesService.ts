@@ -1,4 +1,4 @@
-import { ServiceProvide } from "../../../../domain/types/ServiceProvide";
+import { ServiceProvide } from "../../../../../domain/types/ServiceProvide";
 
 export class GetEpisodesService {
   constructor(public provide: ServiceProvide) {}

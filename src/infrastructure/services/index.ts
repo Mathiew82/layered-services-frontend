@@ -7,8 +7,8 @@ const serviceProvide = new ServiceProvide({
 });
 
 // Import Service Modules
-import { characterService } from "../../modules/character/infrastructure/services";
-import { episodeService } from "../../modules/episode/infrastructure/services";
+import { characterService } from "../../app/modules/character/infrastructure/services";
+import { episodeService } from "../../app/modules/episode/infrastructure/services";
 
 // Set and export services by modules
 export const character = {
