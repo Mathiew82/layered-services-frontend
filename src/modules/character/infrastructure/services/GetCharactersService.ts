@@ -1,11 +1,7 @@
-import { ServiceProvide } from "../../../../infrastructure/services/ServiceProvide";
+import { ServiceProvide } from "../../../../domain/types/ServiceProvide";
 
 export class GetCharactersService {
-  provide: ServiceProvide;
-
-  constructor(provide: ServiceProvide) {
-    this.provide = provide;
-  }
+  constructor(public provide: ServiceProvide) {}
 
   public async execute(): Promise<object> {
     const options = {
