@@ -1,5 +1,5 @@
 import { GetEpisodesService } from "./GetEpisodesService";
 
-export const episode = {
+export const episodeService = {
   GetEpisodesService,
 };

@@ -1,11 +1,11 @@
 import "./style.css";
-import { Services } from "./infrastructure/services";
+import { character, episode } from "./infrastructure/services";
 
 // Rick and Morty API App
 window.onload = async () => {
-  const characters = await Services.character.get.execute();
+  const characters = await character.getAll.execute();
   console.log(characters);
 
-  const episodes = await Services.episode.get.execute();
+  const episodes = await episode.getAll.execute();
   console.log(episodes);
 };

@@ -6,16 +6,15 @@ const serviceProvide = new ServiceProvide({
   headers: new Headers(),
 });
 
-// Import Characters Services
-import { character } from "../../modules/character/infrastructure/services";
-import { episode } from "../../modules/episode/infrastructure/services";
+// Import Service Modules
+import { characterService } from "../../modules/character/infrastructure/services";
+import { episodeService } from "../../modules/episode/infrastructure/services";
 
-// Set Services
-export const Services = {
-  character: {
-    get: new character.GetCharactersService(serviceProvide),
-  },
-  episode: {
-    get: new episode.GetEpisodesService(serviceProvide),
-  },
+// Set and export services by modules
+export const character = {
+  getAll: new characterService.GetCharactersService(serviceProvide),
+};
+
+export const episode = {
+  getAll: new episodeService.GetEpisodesService(serviceProvide),
 };

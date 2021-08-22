@@ -1,5 +1,5 @@
 import { GetCharactersService } from "./GetCharactersService";
 
-export const character = {
+export const characterService = {
   GetCharactersService,
 };
