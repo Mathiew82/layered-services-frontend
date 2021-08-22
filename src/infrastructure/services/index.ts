@@ -1,8 +1,8 @@
 // Import ProvideServices
-import { ProvideServices } from "./ProvideServices";
+import { ServiceProvide } from "./ServiceProvide";
 
-// Set properties for ProvideServices
-const provideServices = new ProvideServices({
+// Set properties for ServiceProvide
+const serviceProvide = new ServiceProvide({
   headers: new Headers(),
 });
 
@@ -13,9 +13,9 @@ import { episode } from "../../modules/episode/infrastructure/services";
 // Set Services
 export const Services = {
   character: {
-    get: new character.GetCharactersService(provideServices),
+    get: new character.GetCharactersService(serviceProvide),
   },
   episode: {
-    get: new episode.GetEpisodesService(provideServices),
+    get: new episode.GetEpisodesService(serviceProvide),
   },
 };

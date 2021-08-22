@@ -1,14 +1,16 @@
-export class GetCharactersService {
-  provide: any;
+import { ServiceProvide } from "../../../../infrastructure/services/ServiceProvide";
 
-  constructor(provide: any) {
+export class GetCharactersService {
+  provide: ServiceProvide;
+
+  constructor(provide: ServiceProvide) {
     this.provide = provide;
   }
 
   public async execute(): Promise<object> {
     const options = {
       method: "GET",
-      headers: this.provide.headers,
+      headers: this.provide.config.headers,
     };
 
     return await (
